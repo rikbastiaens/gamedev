@@ -1,6 +1,6 @@
 CC=g++
 CFLAGS=-Wall
-OBJS=main.o
+OBJS=main.o window.o
 PROG=game
 LIBDIR=/usr/local/lib
 INCDIR=/usr/include
@@ -14,6 +14,8 @@ $(PROG): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $@ $(LDFLAGS) $(LDLIBS) $(INCFLAG)
 
 main.o: main.cpp
+
+window.o: window.cpp 
 
 clean:
 		rm -f *~ *.o $(PROG) core a.out

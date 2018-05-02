@@ -5,7 +5,7 @@ int main() {
 
   //create window
   sf::RenderWindow window(sf::VideoMode(640,480),"First Window");
-
+  window.setFramerateLimit(60);
   //create rectangle to draw 
   sf::RectangleShape rect1(sf::Vector2f(128.0f,128.0f));
   rect1.setFillColor(sf::Color::White);
